@@ -2,20 +2,27 @@
 #include "Subsystems/ExampleSubsystem.h"
 #include "Commands/Scheduler.h"
 
-CommandBase::CommandBase(const char *name) : Command(name) {
+CommandBase::CommandBase(const char *name) : Command(name) 
+{
+	
 }
 
-CommandBase::CommandBase() : Command() {
+CommandBase::CommandBase() : Command() 
+{
+
 }
 
-// Initialize a single static instance of all of your subsystems to NULL
+// Initialize a single static instance of all subsystems to NULL.
 ExampleSubsystem* CommandBase::examplesubsystem = NULL;
 OI* CommandBase::oi = NULL;
 
-void CommandBase::init() {
-    // Create a single static instance of all of your subsystems. The following
-	// line should be repeated for each subsystem in the project.
-	examplesubsystem = new ExampleSubsystem();
+/**
+ * @brief This is where all of the instances of subsystems will be created. 
+ * Each of them should have a unique name, so that they are clearly identifiable
+ * from others.
+ */
+void CommandBase::init() 
+{
 	
 	oi = new OI();
 }
