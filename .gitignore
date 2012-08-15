@@ -1,0 +1,4 @@
+Makefile*
+PPC603gnu/
+*.sublime-project
+*.sublime-workspace
