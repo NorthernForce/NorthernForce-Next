@@ -24,5 +24,5 @@ OI* CommandBase::oi = NULL;
 void CommandBase::init() 
 {
 	
-	oi = new OI();
+	//oi = new OI();
 }

@@ -9,6 +9,17 @@
  * be included in every header file that is created, so that it is accessible anywhere.
  */
 
+/**
+ * @brief The addresses of the CAN Jaguars on the CAN bus.
+ */
+enum JaguarAddress
+{
+	kFrontLeftJaguar = 2,
+	kFrontRightJaguar = 4,
+	kRearLeftJaguar = 3,
+	kRearRightJaguar = 5,
+};
+
  /*
   * @brief The button ports on the XBox Joystick, as interpreted by the cRIO.
   */
@@ -57,5 +68,7 @@ static const float kDriveD = 0.0;
 static const int kDriveOutputVoltageLimit = 12;
 static const int kDriveEncoderLines = 256;
 static const bool kUseEncoders = false;
+static const float kDriveRamp = 0.4;
+static const float kDriveVelocityLimit = 1.0;
 
 #endif
