@@ -9,14 +9,19 @@ namespace
 	const float tolerance = 0.2;
 	const float thereTolerance = 0.1;
 	const float rotateReduce = 1.5;
+	
 	//! The robot wheel base
 	const float wheelBase = 25.0;
+	
 	//! The robot track (assumes front and rear track is the same)
 	const float wheelTrack = 22.25;
+	
 	//! The ratio of wheelBase to wheelTrack
 	const float wheelRatio = wheelBase / wheelTrack;
+	
 	//! The diameter of the Big Wheels on the BS Bot.
 	const float bigWheelDiameter = 12.5;
+	
 	//! The diameter of the BS bot's Mecanum wheels.
 	const float mecanumWheelDiameter = 5.5;
 };
@@ -119,13 +124,6 @@ void AdvancedRobotDrive::DriveBSBot(FRCXboxJoystick& joystick)
 	moveValue   = Limit (moveValue, limit);
 	rotateValue = Limit (rotateValue, limit) / rotateReduce;
 
-//	if (false)
-//	{
-//		// square the inputs (while preserving the sign) to increase fine control while permitting full power
-//		moveValue = SignedSquare (moveValue);
-//		rotateValue = SignedSquare (rotateValue);
-//	}
-
 	if (moveValue >= 0.0)
 	{
 		if (rotateValue > 0.0)
@@ -173,7 +171,7 @@ void AdvancedRobotDrive::DriveBSBot(FRCXboxJoystick& joystick)
  */
 void AdvancedRobotDrive::DriveSkidSteer(FRCXboxJoystick& joystick)
 {
-
+	//@TODO Derive math for SkidSteer.
 }
 
 /**
@@ -181,7 +179,7 @@ void AdvancedRobotDrive::DriveSkidSteer(FRCXboxJoystick& joystick)
  */
 void AdvancedRobotDrive::DriveSwivelSteer(FRCXboxJoystick& joystick)
 {
-
+	//@TODO Derive math for SwivelSteer. (Do we even need this?)
 }
 
 /**
@@ -223,9 +221,9 @@ void AdvancedRobotDrive::PowerMotors (
 	switch (m_driveMode)
 	{
 		case kMecanumDrive:
-			DriveMotors::m_rearRightMotor.SetOutput(-rearRight);
+			DriveMotors::m_rearRightMotor.SetOutput(rearRight);
 			DriveMotors::m_rearLeftMotor.SetOutput(rearLeft);
-			DriveMotors::m_frontRightMotor.SetOutput(-frontRight);
+			DriveMotors::m_frontRightMotor.SetOutput(frontRight);
 			DriveMotors::m_frontLeftMotor.SetOutput(frontLeft);
 			break;
 		case kBSBotDrive:

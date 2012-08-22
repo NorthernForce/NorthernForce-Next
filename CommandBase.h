@@ -1,8 +1,7 @@
 #ifndef COMMAND_BASE_H
 #define COMMAND_BASE_H
-
 #include "Commands/Command.h"
-#include "Subsystems/ExampleSubsystem.h"
+#include "Subsystems/DriveSubsystem.h"
 #include "OI.h"
 
 
@@ -20,8 +19,8 @@ public:
 	static void init();
 	
 	// Create a single static instance of all subsystems.
-	static ExampleSubsystem *examplesubsystem;
 	static OI *oi;
+	static DriveSubsystem *s_Drive;
 };
 
 #endif

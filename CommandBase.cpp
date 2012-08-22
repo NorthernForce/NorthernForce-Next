@@ -1,5 +1,4 @@
 #include "CommandBase.h"
-#include "Subsystems/ExampleSubsystem.h"
 #include "Commands/Scheduler.h"
 
 CommandBase::CommandBase(const char *name) : Command(name) 
@@ -13,8 +12,8 @@ CommandBase::CommandBase() : Command()
 }
 
 // Initialize a single static instance of all subsystems to NULL.
-ExampleSubsystem* CommandBase::examplesubsystem = NULL;
 OI* CommandBase::oi = NULL;
+DriveSubsystem* CommandBase::s_Drive = NULL;
 
 /**
  * @brief This is where all of the instances of subsystems will be created. 
@@ -23,6 +22,6 @@ OI* CommandBase::oi = NULL;
  */
 void CommandBase::init() 
 {
-	
-	//oi = new OI();
+	oi = new OI();
+	s_Drive = new DriveSubsystem();
 }

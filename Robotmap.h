@@ -61,6 +61,17 @@ enum DriveMode
 	kSwivelSteer = 4,
 };
 
+/**
+ * @brief The different possible levels of debug logging.
+ */
+enum LogLevel
+{
+	kSystemLog = 1,
+	kDebugLog = 2,
+	kReleaseLog = 3,
+	kErrorLog = 4,
+};
+
 //Variables that concern driving the robot.
 static const float kDriveP = 0.0;
 static const float kDriveI = 0.0;
