@@ -26,7 +26,7 @@ class AdvancedRobotDrive:
 public:
 	AdvancedRobotDrive(DriveMode mode);
 	void DriveRobot(FRCXboxJoystick &joystick);
-	void AutonomousDriveRobot();
+	void DriveAutonomous();
 
 	void Stop();
 

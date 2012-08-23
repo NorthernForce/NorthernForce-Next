@@ -3,6 +3,8 @@
 
 /**
  * @brief Initializes the drive subsystem.
+ * 
+ * @author Arthur Lockman
  */
 DriveSubsystem::DriveSubsystem() : Subsystem("DriveSubsystem") 
 {
@@ -11,6 +13,8 @@ DriveSubsystem::DriveSubsystem() : Subsystem("DriveSubsystem")
 
 /**
  * @brief Sets up the default command for the subsystem.
+ * 
+ * @author WPILib
  */
 void DriveSubsystem::InitDefaultCommand() 
 {

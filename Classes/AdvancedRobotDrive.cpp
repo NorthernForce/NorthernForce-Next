@@ -70,8 +70,9 @@ catch (exception e)
  * @brief Initializes the AdvancedRobotDrive class. This class can handle
  * any kind of drive system. This class will initalize AdvancedRobotDrive to 
  * the drive mode that is specified in the constructor.
- *
  * @param mode The drive mode to drive the robot in.
+ * 
+ * @author Arthur Lockman
  */
 AdvancedRobotDrive::AdvancedRobotDrive(DriveMode mode):
     DriveMotors(),
@@ -82,6 +83,14 @@ AdvancedRobotDrive::AdvancedRobotDrive(DriveMode mode):
 
 }
 
+/**
+ * @brief Drive the robot. Call this from a command. Do not use
+ * this for autonomous. See AdvancedRobotDrive::DriveAutonomous.
+ * @param joystick The joystick to pull the drive commands.
+ * @see AdvancedRobotDrive::DriveAutonomous
+ * 
+ * @author Arthur Lockman
+ */
 void AdvancedRobotDrive::DriveRobot(FRCXboxJoystick &joystick)
 {
 	switch (m_driveMode)
@@ -102,7 +111,21 @@ void AdvancedRobotDrive::DriveRobot(FRCXboxJoystick &joystick)
 }
 
 /**
+ * @brief Drives the robot in autonomous mode. Do not use this to
+ * drive in teleoperated mode. See AdvancedRobotDrive::DriveRobot.
+ * @see AdvancedRobotDrive::DriveRobot
+ * 
+ * @author Arthur Lockman
+ */
+void AdvancedRobotDrive::DriveAutonomous()
+{
+	//@TODO: Develop code for driving in Autonomous mode.
+}
+
+/**
  * @brief Drives the robot in Mecanum drive mode. 
+ * 
+ * @author Arthur Lockman
  */
 void AdvancedRobotDrive::DriveMecanum(FRCXboxJoystick& joystick)
 {
@@ -111,6 +134,8 @@ void AdvancedRobotDrive::DriveMecanum(FRCXboxJoystick& joystick)
 
 /**
  * @brief Drives the robot in BSBot drive mode. 
+ * 
+ * @author Arthur Lockman, Conor McGrory
  */
 void AdvancedRobotDrive::DriveBSBot(FRCXboxJoystick& joystick)
 {
@@ -168,6 +193,7 @@ void AdvancedRobotDrive::DriveBSBot(FRCXboxJoystick& joystick)
 
 /**
  * @brief Drives the robot in Skid Steer drive mode. 
+
  */
 void AdvancedRobotDrive::DriveSkidSteer(FRCXboxJoystick& joystick)
 {
@@ -184,9 +210,10 @@ void AdvancedRobotDrive::DriveSwivelSteer(FRCXboxJoystick& joystick)
 
 /**
  * @brief Limits a value to a maximum amount.
- * 
  * @param input The input value to have the limit applied to.
  * @param max The limit for the input.
+ * 
+ * @author Joseph Martin
  */
 float AdvancedRobotDrive::Limit(float input, float max)
 {
@@ -209,6 +236,7 @@ float AdvancedRobotDrive::Limit(float input, float max)
  * @param frontRight The speed of the front right motor.
  * @param rearLeft The speed of the rear left motor.
  * @param rearRight The speed of the rear right motor.
+ * @author Arthur Lockman
  */
 void AdvancedRobotDrive::PowerMotors (
 		float frontLeft,

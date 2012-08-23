@@ -17,13 +17,15 @@
 class LogSystem: public Subsystem 
 {
 private:
-	void Print(string* message);
-	void PrintToFile(string* message);
+	void Print(const char* message);
+	void PrintToFile(const char* message);
 	LogLevel m_logLevel;
+	char m_logDirectory[32];
+	void SetDirectory(const char* directory);
 public:
 	LogSystem(LogLevel level);
 	void InitDefaultCommand();
-	void LogMessage(string* message, LogLevel level);
+	void LogMessage(const char* message, LogLevel level);
 };
 
 #endif

@@ -1,21 +1,32 @@
 #include "LogSystem.h"
 #include "../Robotmap.h"
+#include <stdio.h>
+
+/** 
+ * @brief Private NI function needed to write to the VxWorks target 
+ */
+IMAQ_FUNC int Priv_SetWriteFileAllowed(UINT32 enable); 
 
 /**
  * @brief Constructs the Logging subsystem.
- * 
  * @param level The level of logs to save to the logfile and print to
  * the console. 
+ * 
+ * @author Arthur Lockman
  */
 LogSystem::LogSystem(LogLevel level) : 
 	Subsystem("LogSystem") , 
 	m_logLevel(level)
 {
-	//@TODO Create or continue an existing log file for logging.
+	this->SetDirectory("/tmp/log");
+	this->PrintToFile("-----System Boot: Starting New Log-----");
+	this->Print("-----System Boot: Starting New Log-----");
 }
     
 /**
  * @brief Handles the creation of the default command for this subsystem.
+ * 
+ * @author WPILib
  */
 void LogSystem::InitDefaultCommand() 
 {
@@ -23,35 +34,54 @@ void LogSystem::InitDefaultCommand()
 }
 
 /**
- * @brief Logs a message to the logfile and to the console.
+ * @brief Sets the directory in which to save the logfile.
+ * @param directory The directory to save logs in.
  * 
+ * @author Arthur Lockman
+ */
+void LogSystem::SetDirectory(const char* directory)
+{
+	strcpy(m_logDirectory, directory);
+	Priv_SetWriteFileAllowed(1);
+}
+
+/**
+ * @brief Logs a message to the logfile and to the console.
  * @param message The message to be logged.
  * @param level The level of log that this message has attached to it.
+ * 
+ * @author Arthur Lockman
  */
-void LogSystem::LogMessage(string* message, LogLevel level)
+void LogSystem::LogMessage(const char* message, LogLevel level)
 {
 	if (level >= m_logLevel)
 	{
 		this->Print(message);
+		this->PrintToFile(message);
 	}
 }
 
 /**
  * @brief Logs a message to the console.
- * 
  * @param message The message to log. 
+ * 
+ * @author Arthur Lockman
  */
-void LogSystem::Print(string* message)
+void LogSystem::Print(const char* message)
 {
 	printf("%s\n",message);
 }
 
 /**
  * @brief Logs a message to the logfile.
- * 
  * @param message The message to log.
+ * 
+ * @author Arthur Lockman
  */
-void LogSystem::PrintToFile(string* message)
+void LogSystem::PrintToFile(const char* message)
 {
 	//@TODO Log message to the logfile.
+	FILE* logFile = fopen("logfile.txt","a"); 
+	fprintf(logFile, "%s\n",message);
+	fclose(logFile);
 }
