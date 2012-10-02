@@ -57,6 +57,9 @@ float FRCXboxJoystick::GetY(JoystickHand hand)
 	return DeadbandAdjust(Joystick::GetY(hand));
 }
 
+/**
+ * Calculate the deadband on the controller.
+ */
 void FRCXboxJoystick::CalculateDeadband()
 {
     Deadband = 0.01;
