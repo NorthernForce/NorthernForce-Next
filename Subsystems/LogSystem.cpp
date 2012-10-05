@@ -14,7 +14,7 @@ IMAQ_FUNC int Priv_SetWriteFileAllowed(UINT32 enable);
  * 
  * @author Arthur Lockman
  */
-LogSystem::LogSystem(LogLevel level) : 
+LogSystem::LogSystem(LogPriority level) : 
 	Subsystem("LogSystem") , 
 	m_logLevel(level)
 {
@@ -52,7 +52,7 @@ void LogSystem::SetDirectory(const char* directory)
  * 
  * @author Arthur Lockman
  */
-void LogSystem::LogMessage(const char* message, LogLevel level)
+void LogSystem::LogMessage(const char* message, LogPriority level)
 {
 	if (level >= m_logLevel)
 	{

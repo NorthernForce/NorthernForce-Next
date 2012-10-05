@@ -19,13 +19,13 @@ class LogSystem: public Subsystem
 private:
 	void Print(const char* message);
 	void PrintToFile(const char* message);
-	LogLevel m_logLevel;
+	LogPriority m_logLevel;
 	char m_logDirectory[32];
 	void SetDirectory(const char* directory);
 public:
-	LogSystem(LogLevel level);
+	LogSystem(LogPriority level);
 	void InitDefaultCommand();
-	void LogMessage(const char* message, LogLevel level);
+	void LogMessage(const char* message, LogPriority level);
 };
 
 #endif

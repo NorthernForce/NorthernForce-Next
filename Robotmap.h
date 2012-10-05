@@ -64,12 +64,11 @@ enum DriveMode
 /**
  * @brief The different possible levels of debug logging.
  */
-enum LogLevel
+enum LogPriority
 {
-	kSystemLog = 1,
-	kDebugLog = 2,
-	kReleaseLog = 3,
-	kErrorLog = 4,
+	kLogPriorityCritical = 1,
+	kLogPriorityMedium = 2,
+	kLogPriorityDebug = 3,
 };
 
 //Variables that concern driving the robot.
