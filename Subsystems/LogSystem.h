@@ -13,6 +13,7 @@
  * non-critical messages unless testing is going on.
  *
  * @author arthurlockman
+ * @see https://github.com/NorthernForce/Rebound-Rumble/blob/master/Project/Commands/LogAccelerometer.cpp
  */
 class LogSystem: public Subsystem 
 {
