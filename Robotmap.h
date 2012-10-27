@@ -37,6 +37,25 @@ enum XBoxJoystickButtonPort
 	kXBoxButtonRightJoystick = 10,
 };
 
+/*
+ * @brief The button ports on the Attack 3 Joystick.
+ */
+ enum Attack3JoystickPort
+ {
+ 	kAttackJoystickButtonTrigger = 1,
+ 	kAttackJoystickButton2 = 2,
+ 	kAttackJoystickButton3 = 3,
+ 	kAttackJoystickButton4 = 4,
+ 	kAttackJoystickButton5 = 5,
+ 	kAttackJoystickButton6 = 6,
+ 	kAttackJoystickButton7 = 7,
+ 	kAttackJoystickButton8 = 8,
+ 	kAttackJoystickButton9 = 9,
+ 	kAttackJoystickButton10 = 10,
+ 	kAttackJoystickButton11 = 11,
+ 	kAttackJoystickButton12 = 12,
+ }
+
 /**
  * @brief The port numbers of the analog sticks on the XBox Joystick.
  */

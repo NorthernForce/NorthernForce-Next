@@ -2,10 +2,12 @@
 #include "Joystick.h"
 
 /**
- * @brief This class constructs the instance
+ * @brief This method constructs the instance
  * of the XBox Joystick. It automatically 
  * calculates the deadband for the joysticks 
  * on the controller.
+ *
+ * @param port The port on which the joystick lives.
  * 
  * @author Arthur Lockman
  */

@@ -1,5 +1,6 @@
 #ifndef FRCXBOXJOYSTICK_H
 #define FRCXBOXJOYSTICK_H
+
 #include <WPILib.h>
 #include "../Robotmap.h"
 #include "Joystick.h"
@@ -11,7 +12,8 @@
  * 
  * This class also contains JoystickButtons for all of the 
  * buttons that are available on the XBox joystick itself. 
- * These buttons can be assigned by calling [stick].[button].WhenPressed().
+ * These buttons can be assigned by calling 
+ * <code>[stick].[button].WhenPressed()</code>.
  * 
  * @author Arthur Lockman
  */
