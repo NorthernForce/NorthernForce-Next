@@ -99,5 +99,6 @@ static const int kDriveEncoderLines = 256;
 static const bool kUseEncoders = false;
 static const float kDriveRamp = 0.4;
 static const float kDriveVelocityLimit = 1.0;
+static const bool kProcessImages = true;
 
 #endif
