@@ -1,0 +1,9 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Vector3D::Vector3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Vector3D::CrossProduct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_vector3_d.html#ace98ee5d46b4cb8cd6de20beff670727",tooltip="Returns the cross product of the two vectors."];
+}

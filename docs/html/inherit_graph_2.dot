@@ -1,0 +1,7 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Camera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_camera.html",tooltip="This class is the camera subsystem. It is used to get images and data from the camera, and process those images so that they&#39;re useful to the game. The class assumes that the camera has the IP 10.1.72.11. If this is different, be sure to change the IP in the constructor for this class."];
+}
