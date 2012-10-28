@@ -52,6 +52,8 @@
 
 <p>The hope with this codebase is to provide a solid foundation for all future robots that are based on C++, and to provide work to be done during the pre-season. The hope is that this base is done as soon as the regular season comes around, so that we can focus on doing other tasks aside from getting the robot moving during the season, such as game specific functions.</p>
 
+<p><a href="http://northernforce.github.com/NorthernForce-Next/docs/"><strong>Documentation for this code is available here</strong></a></p>
+
 <h2>Prefixes</h2>
 
 <p>The code will contain certain prefixes to help discern which kinds of things the variables are. Here are the different types of prefixes that will be found in the code, and what they mean.</p>
@@ -122,9 +124,9 @@ code much easier to read, especially with more complex class definitions.</p>
 <pre><code>CommandBasedRobot(void):
     o_driveStick (1, 6, 10),
     o_driverStation (*DriverStation::GetInstance())
-{
-    CommandBase::init();
-}
+    {
+        CommandBase::init();
+    }
 </code></pre>
       </section>
 
