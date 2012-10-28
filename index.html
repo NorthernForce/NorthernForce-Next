@@ -63,9 +63,69 @@
 <strong>s</strong>Variable - The <strong>s</strong> in front of a variable will mean that this variable is a subsystem. Subsystems are defined within their own class files, and the variables to access them are defined within CommandBase.</li>
 <li>
 <strong>o</strong>Variable - The <strong>o</strong> in front of a variable will mean that this variable is an operator interface element. These are defined within the OI class.</li>
-</ul><h2>Commenting</h2>
+</ul><h2>Documentation:</h2>
 
-<p>All methods and classes must be properly documented. This makes the code much easier to read. Documentation is added by using comments within your code. </p>
+<p>Please make sure to document all of your classes. Provide the author of the subclass, what the class does, what it takes as parameters, and what the class returns.</p>
+
+<p>Example:</p>
+
+<pre><code>/**
+ * @brief This class does a, b, and c.
+ *
+ * @param x An int of some amount.
+ * @param y A string of some value.
+ * @param z A bool of some value.
+ *
+ * @return A boolean of fail or pass.
+ *
+ * @author John Smith
+ **/
+</code></pre>
+
+<h2>Naming:</h2>
+
+<p>All classes should be named with capital letters, in camel case.</p>
+
+<p>Example: </p>
+
+<pre><code>class ExampleClass
+class ExampleClassExtensionThree
+</code></pre>
+
+<p>All methods should be named along the same parameters.</p>
+
+<p>Example:</p>
+
+<pre><code>void ExampleClass::ExampleMethod
+void ExampleClass::ExampleMethodNumberFour
+</code></pre>
+
+<h2>Intentation:</h2>
+
+<p>Please make sure that your code is properly indented. <strong>This makes it much easier for everyone to read and make sense of.</strong></p>
+
+<h2>Braces:</h2>
+
+<p>Braces should be separated from the line that their method is on. It makes the
+code much easier to read, especially with more complex class definitions.</p>
+
+<p>Example:</p>
+
+<pre><code>void MyClass::MyMethod() 
+{
+    // Code Here.
+}
+</code></pre>
+
+<p>Example 2:</p>
+
+<pre><code>CommandBasedRobot(void):
+    o_driveStick (1, 6, 10),
+    o_driverStation (*DriverStation::GetInstance())
+{
+    CommandBase::init();
+}
+</code></pre>
       </section>
 
       <footer>
