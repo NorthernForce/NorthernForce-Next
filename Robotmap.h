@@ -54,7 +54,7 @@ enum XBoxJoystickButtonPort
  	kAttackJoystickButton10 = 10,
  	kAttackJoystickButton11 = 11,
  	kAttackJoystickButton12 = 12,
- }
+ };
 
 /**
  * @brief The port numbers of the analog sticks on the XBox Joystick.
