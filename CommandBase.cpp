@@ -14,7 +14,6 @@ CommandBase::CommandBase() : Command()
 // Initialize a single static instance of all subsystems to NULL.
 OI* CommandBase::oi = NULL;
 DriveSubsystem* CommandBase::s_Drive = NULL;
-Camera* CommandBase::s_Camera = NULL;
 
 /**
  * @brief This is where all of the instances of subsystems will be created. 
@@ -25,5 +24,4 @@ void CommandBase::init()
 {
 	oi = new OI();
 	s_Drive = new DriveSubsystem();
-	s_Camera = new Camera();
 }

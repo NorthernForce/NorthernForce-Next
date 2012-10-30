@@ -2,7 +2,6 @@
 #define COMMAND_BASE_H
 #include "Commands/Command.h"
 #include "Subsystems/DriveSubsystem.h"
-#include "Subsystems/Camera.h"
 #include "OI.h"
 
 
@@ -22,7 +21,6 @@ public:
 	// Create a single static instance of all subsystems.
 	static OI *oi;
 	static DriveSubsystem *s_Drive;
-	static Camera *s_Camera;
 };
 
 #endif
