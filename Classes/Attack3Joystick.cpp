@@ -61,7 +61,7 @@ float Attack3Joystick::GetPOT()
  */
 bool Attack3Joystick::GetTrigger()
 {
-	return Button1.Get();
+	return Trigger.Get();
 }
 
 /**

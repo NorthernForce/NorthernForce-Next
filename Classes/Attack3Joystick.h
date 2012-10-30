@@ -26,7 +26,7 @@ public:
 	Attack3Joystick(int port);
 
 	float GetStickX();
-	float GetSticky();
+	float GetStickY();
 	float GetPOT();
 
 	bool GetTrigger();
