@@ -28,7 +28,7 @@ private:
     static const float deltaT = 0.02;
     float Limit(float in, float max);
 public:
-    RampedCANJaguar(int deviceNumber, float ramp, float maxVelocity, float maxAcceleration, float m_tolerance, float m_thereTolerance);
+    RampedCANJaguar(int deviceNumber, float maxVelocity, float maxAcceleration, float m_tolerance, float m_thereTolerance);
     void PrintLimits();
     void SetMaxAcceleration(float maxAcceleration);
     void SetMaxVelocity(float maxVelocity);
