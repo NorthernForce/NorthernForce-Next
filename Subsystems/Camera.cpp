@@ -19,11 +19,11 @@ IMAQ_FUNC int Priv_SetWriteFileAllowed(UINT32 enable);
 Camera::Camera() :
 	Subsystem("Camera"),
 	m_cam(AxisCamera::GetInstance("10.1.72.11")),
-	m_imageProcessingTask("ImageProcessing", (FUNCPTR)Camera::ImageProcessingTask, Task::kDefaultPriority + 10),
-	m_cameraSemaphore (semBCreate (SEM_Q_PRIORITY, SEM_FULL)),
 	m_saveSourceImage(false),
 	m_saveProcessedImages(false),
-	m_frameProcesingTime(0)
+	m_frameProcessingTime(0),
+	m_imageProcessingTask("ImageProcessing", (FUNCPTR)Camera::ImageProcessingTask, Task::kDefaultPriority + 10),
+	m_cameraSemaphore (semBCreate (SEM_Q_PRIORITY, SEM_FULL))
 {
 	SetDirectory ("/tmp/Images");
 	m_imageProcessingTask.Start (reinterpret_cast<UINT32> (this));
@@ -42,7 +42,7 @@ Camera::~Camera()
  * the default command for this subsystem to run. 
  * Does nothing as the camera class takes no commands.
  */
-Camera::InitDefaultCommand() { return; }
+void Camera::InitDefaultCommand() { return; }
 
 /** @brief Sets the directory within which to write the camera images
  *
@@ -96,7 +96,7 @@ void Camera::ProcessImages()
 		}
 
 		m_cam.GetImage (&m_image);
-		if (saveSourceImage ) SaveImage(m_image, "src.jpg");
+		if (m_saveSourceImage) SaveImage(m_image, "src.jpg");
 
 		//! @TODO: IMAGE PROCCESSING CODE HERE.
 
