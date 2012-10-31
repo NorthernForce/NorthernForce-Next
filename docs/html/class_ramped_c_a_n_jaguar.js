@@ -1,6 +1,6 @@
 var class_ramped_c_a_n_jaguar =
 [
-    [ "RampedCANJaguar", "class_ramped_c_a_n_jaguar.html#a4f2f1dba0900cc174a33d130acc71416", null ],
+    [ "RampedCANJaguar", "class_ramped_c_a_n_jaguar.html#a8ca77d3540d971346fc8d1af3093fb81", null ],
     [ "DisableControl", "class_ramped_c_a_n_jaguar.html#a104f240160fd76d36fce6a9f9309aac0", null ],
     [ "EnableControl", "class_ramped_c_a_n_jaguar.html#abd55a13ceee1f5bb3441651ba268e30e", null ],
     [ "EnableControl", "class_ramped_c_a_n_jaguar.html#a1c05bb1eecde61aa59f36a7a8516abd6", null ],

@@ -1,7 +1,0 @@
-digraph G
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="OI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_i.html",tooltip="This class is used to handle all operator input, hence its name, OI. Any classes for interacting with..."];
-}

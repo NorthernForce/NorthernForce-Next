@@ -9,5 +9,6 @@ var searchData=
   ['driverobot',['DriveRobot',['../class_advanced_robot_drive.html#aab4fe632f2d8a0ef5f7240fd0bb51c35',1,'AdvancedRobotDrive']]],
   ['drivesubsystem',['DriveSubsystem',['../class_drive_subsystem.html',1,'DriveSubsystem'],['../class_drive_subsystem.html#a3407432f9123b97c5d0bfc8601db76c2',1,'DriveSubsystem::DriveSubsystem()']]],
   ['drivesubsystem_2ecpp',['DriveSubsystem.cpp',['../_drive_subsystem_8cpp.html',1,'']]],
+  ['drivesubsystem_2ed',['DriveSubsystem.d',['../_drive_subsystem_8d.html',1,'']]],
   ['drivesubsystem_2eh',['DriveSubsystem.h',['../_drive_subsystem_8h.html',1,'']]]
 ];

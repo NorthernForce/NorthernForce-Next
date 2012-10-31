@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>NextBot: CommandBase.h Source File</title>
+<title>Next: CommandBase.h Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -32,10 +32,10 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">NextBot
+   <div id="projectname">Next
    &#160;<span id="projectnumber">0.5</span>
    </div>
-   <div id="projectbrief">This is the next generation base code for FIRST Team 172.</div>
+   <div id="projectbrief">The next generation base code for FIRST Team 172</div>
   </td>
   
   
@@ -116,30 +116,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define COMMAND_BASE_H</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &quot;Commands/Command.h&quot;</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="_drive_subsystem_8h.html">Subsystems/DriveSubsystem.h</a>&quot;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_camera_8h.html">Subsystems/Camera.h</a>&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_o_i_8h.html">OI.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_o_i_8h.html">OI.h</a>&quot;</span>
+<a name="l00006"></a>00006 
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 
-<a name="l00016"></a><a class="code" href="class_command_base.html">00016</a> <span class="keyword">class </span><a class="code" href="class_command_base.html" title="The base for all commands. All atomic commands should subclass CommandBase. CommandBase stores create...">CommandBase</a>: <span class="keyword">public</span> Command {
-<a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a>00018         <a class="code" href="class_command_base.html#af42de9fe79dc64fce99580ee1e2f678f">CommandBase</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
-<a name="l00019"></a>00019         <a class="code" href="class_command_base.html#af42de9fe79dc64fce99580ee1e2f678f">CommandBase</a>();
-<a name="l00020"></a>00020         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_command_base.html#a4dbfcd3b6ae92d752bc36a29dd1e1a5a" title="This is where all of the instances of subsystems will be created. Each of them should have a unique n...">init</a>();
-<a name="l00021"></a>00021         
-<a name="l00022"></a>00022         <span class="comment">// Create a single static instance of all subsystems.</span>
-<a name="l00023"></a><a class="code" href="class_command_base.html#ae6807501159925367f8008fc0534eda5">00023</a>         <span class="keyword">static</span> <a class="code" href="class_o_i.html" title="This class is used to handle all operator input, hence its name, OI. Any classes for interacting with...">OI</a> *<a class="code" href="class_command_base.html#ae6807501159925367f8008fc0534eda5">oi</a>;
-<a name="l00024"></a><a class="code" href="class_command_base.html#ad0706c31cc51896165a34d829c771d70">00024</a>         <span class="keyword">static</span> <a class="code" href="class_drive_subsystem.html" title="This class is the drive subsystem for the robot. Call the methods that are in this subsystem from Com...">DriveSubsystem</a> *<a class="code" href="class_command_base.html#ad0706c31cc51896165a34d829c771d70">s_Drive</a>;
-<a name="l00025"></a><a class="code" href="class_command_base.html#aa6e0f5182224a59c8c9bc92552edd3c7">00025</a>         <span class="keyword">static</span> <a class="code" href="class_camera.html" title="This class is the camera subsystem. It is used to get images and data from the camera, and process those images so that they&#39;re useful to the game. The class assumes that the camera has the IP 10.1.72.11. If this is different, be sure to change the IP in the constructor for this class.">Camera</a> *<a class="code" href="class_command_base.html#aa6e0f5182224a59c8c9bc92552edd3c7">s_Camera</a>;
-<a name="l00026"></a>00026 };
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <span class="preprocessor">#endif</span>
+<a name="l00015"></a><a class="code" href="class_command_base.html">00015</a> <span class="keyword">class </span><a class="code" href="class_command_base.html" title="The base for all commands. All atomic commands should subclass CommandBase. CommandBase stores create...">CommandBase</a>: <span class="keyword">public</span> Command {
+<a name="l00016"></a>00016 <span class="keyword">public</span>:
+<a name="l00017"></a>00017         <a class="code" href="class_command_base.html#af42de9fe79dc64fce99580ee1e2f678f">CommandBase</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);
+<a name="l00018"></a>00018         <a class="code" href="class_command_base.html#af42de9fe79dc64fce99580ee1e2f678f">CommandBase</a>();
+<a name="l00019"></a>00019         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_command_base.html#a4dbfcd3b6ae92d752bc36a29dd1e1a5a" title="This is where all of the instances of subsystems will be created. Each of them should have a unique n...">init</a>();
+<a name="l00020"></a>00020         
+<a name="l00021"></a>00021         <span class="comment">// Create a single static instance of all subsystems.</span>
+<a name="l00022"></a><a class="code" href="class_command_base.html#ae6807501159925367f8008fc0534eda5">00022</a>         <span class="keyword">static</span> <a class="code" href="class_o_i.html" title="This class is used to handle all operator input, hence its name, OI. Any classes for interacting with...">OI</a> *<a class="code" href="class_command_base.html#ae6807501159925367f8008fc0534eda5">oi</a>;
+<a name="l00023"></a><a class="code" href="class_command_base.html#ad0706c31cc51896165a34d829c771d70">00023</a>         <span class="keyword">static</span> <a class="code" href="class_drive_subsystem.html" title="This class is the drive subsystem for the robot. Call the methods that are in this subsystem from Com...">DriveSubsystem</a> *<a class="code" href="class_command_base.html#ad0706c31cc51896165a34d829c771d70">s_Drive</a>;
+<a name="l00024"></a>00024 };
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="_command_base_8h.html">CommandBase.h</a>      </li>
 
-    <li class="footer">Generated on Sun Oct 28 2012 07:16:35 for NextBot by
+    <li class="footer">Generated on Tue Oct 30 2012 21:51:33 for Next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

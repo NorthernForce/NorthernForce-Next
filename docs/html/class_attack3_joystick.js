@@ -14,7 +14,7 @@ var class_attack3_joystick =
     [ "GetButton9", "class_attack3_joystick.html#abebabfc2edc4c5146c5bb52b4958b11b", null ],
     [ "GetPOT", "class_attack3_joystick.html#a589f3220256e48d2aeb6a02c3a7fa780", null ],
     [ "GetStickX", "class_attack3_joystick.html#acd81bd789e7f507788d0bf3a067112c0", null ],
-    [ "GetSticky", "class_attack3_joystick.html#a14402af790c842f516676ad34aaf3fa4", null ],
+    [ "GetStickY", "class_attack3_joystick.html#a609047d32ce01b6362dd319e534f46c6", null ],
     [ "GetTrigger", "class_attack3_joystick.html#a4b875a3de16ab7203afea9207961da07", null ],
     [ "Button10", "class_attack3_joystick.html#af9cd7ad12082739198b8027b9b003e36", null ],
     [ "Button11", "class_attack3_joystick.html#a30130c14c7b5ccfb42f1db5d1ed912ef", null ],

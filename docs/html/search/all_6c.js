@@ -5,5 +5,6 @@ var searchData=
   ['logpriority',['LogPriority',['../_robotmap_8h.html#aa8b1c6568df4ee385e4d1d12f7153f02',1,'Robotmap.h']]],
   ['logsystem',['LogSystem',['../class_log_system.html',1,'LogSystem'],['../class_log_system.html#a449521bde416544dd0c8e587e0a3a862',1,'LogSystem::LogSystem()']]],
   ['logsystem_2ecpp',['LogSystem.cpp',['../_log_system_8cpp.html',1,'']]],
+  ['logsystem_2ed',['LogSystem.d',['../_log_system_8d.html',1,'']]],
   ['logsystem_2eh',['LogSystem.h',['../_log_system_8h.html',1,'']]]
 ];

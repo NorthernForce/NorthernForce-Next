@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "NextBot", "index.html", [
+  [ "Next", "index.html", [
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],

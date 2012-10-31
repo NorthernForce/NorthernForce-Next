@@ -28,7 +28,7 @@ var searchData=
   ['getrightsticky',['GetRightStickY',['../class_f_r_c_xbox_joystick.html#a096ff96b18e936f347633685c431d10b',1,'FRCXboxJoystick']]],
   ['getstartbutton',['GetStartButton',['../class_f_r_c_xbox_joystick.html#a67c4eed8e980ce9ee6e789168aa52150',1,'FRCXboxJoystick']]],
   ['getstickx',['GetStickX',['../class_attack3_joystick.html#acd81bd789e7f507788d0bf3a067112c0',1,'Attack3Joystick']]],
-  ['getsticky',['GetSticky',['../class_attack3_joystick.html#a14402af790c842f516676ad34aaf3fa4',1,'Attack3Joystick']]],
+  ['getsticky',['GetStickY',['../class_attack3_joystick.html#a609047d32ce01b6362dd319e534f46c6',1,'Attack3Joystick']]],
   ['gettrigger',['GetTrigger',['../class_attack3_joystick.html#a4b875a3de16ab7203afea9207961da07',1,'Attack3Joystick::GetTrigger()'],['../class_f_r_c_xbox_joystick.html#aed676d598c83d085fe2b3d3e44c2386a',1,'FRCXboxJoystick::GetTrigger()']]],
   ['getvalue',['GetValue',['../class_alpha_beta_filter.html#a077d0628af55971b79b1eb6329ce04a6',1,'AlphaBetaFilter']]],
   ['getxbutton',['GetXButton',['../class_f_r_c_xbox_joystick.html#a87cdd1b6099fd8c27a0a7bc02f05c33b',1,'FRCXboxJoystick']]],
