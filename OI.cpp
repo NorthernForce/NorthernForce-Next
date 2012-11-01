@@ -1,7 +1,7 @@
 #include "OI.h"
 
 /**
- * @brief Processes all operator input.
+ * @brief Initialize the operator interface.
  */
 OI::OI() 
 {
