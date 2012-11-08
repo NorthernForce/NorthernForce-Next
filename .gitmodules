@@ -1,0 +1,3 @@
+[submodule "lib/ssobjects"]
+	path = lib/ssobjects
+	url = ssh://git@github.com/patterson7019/ssobjects
