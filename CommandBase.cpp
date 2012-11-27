@@ -12,8 +12,9 @@ CommandBase::CommandBase() : Command()
 }
 
 // Initialize a single static instance of all subsystems to NULL.
-OI* CommandBase::oi = NULL;
+OperatorInterface* CommandBase::oi = NULL;
 DriveSubsystem* CommandBase::s_Drive = NULL;
+LogSystem* CommandBase::s_Log = NULL;
 
 /**
  * @brief This is where all of the instances of subsystems will be created. 
@@ -22,6 +23,7 @@ DriveSubsystem* CommandBase::s_Drive = NULL;
  */
 void CommandBase::init() 
 {
-	oi = new OI();
+	oi = new OperatorInterface();
 	s_Drive = new DriveSubsystem();
+	s_Log = new LogSystem(kLogPrioritySystem);
 }

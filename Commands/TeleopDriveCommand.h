@@ -1,16 +1,16 @@
-#ifndef EXAMPLE_COMMAND_H
-#define EXAMPLE_COMMAND_H
+#ifndef TELEOPDRIVECOMMAND_H
+#define TELEOPDRIVECOMMAND_H
 
 #include "../CommandBase.h"
 
 /**
+ * Drives the robot in Teleop mode.
  *
- *
- * @author ExampleAuthor
+ * @author arthurlockman
  */
-class ExampleCommand: public CommandBase {
+class TeleopDriveCommand: public CommandBase {
 public:
-	ExampleCommand();
+	TeleopDriveCommand();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

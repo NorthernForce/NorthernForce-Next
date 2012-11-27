@@ -2,8 +2,11 @@
 #define COMMAND_BASE_H
 #include "Commands/Command.h"
 #include "Subsystems/DriveSubsystem.h"
-#include "OI.h"
+#include "Subsystems/LogSystem.h"
+#include "OperatorInterface.h"
 
+
+class OperatorInterface;
 
 /**
  * @brief The base for all commands. All atomic commands should subclass CommandBase.
@@ -19,8 +22,9 @@ public:
 	static void init();
 	
 	// Create a single static instance of all subsystems.
-	static OI *oi;
+	static OperatorInterface *oi;
 	static DriveSubsystem *s_Drive;
+	static LogSystem *s_Log;
 };
 
 #endif

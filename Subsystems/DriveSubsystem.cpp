@@ -18,5 +18,23 @@ DriveSubsystem::DriveSubsystem() : Subsystem("DriveSubsystem")
  */
 void DriveSubsystem::InitDefaultCommand() 
 {
-	
+
+}
+
+/**
+ * @brief Drive the robot in teleop mode.
+ * 
+ * @author Arthur Lockman
+ */
+void DriveSubsystem::DriveTeleop(FRCXboxJoystick &stick)
+{
+	m_drive->DriveRobot(stick);
+}
+
+/**
+ * @brief Drive the robot in autonomous.
+ */
+void DriveSubsystem::DriveAutonomous()
+{
+	//@TODO: Complete this method.
 }

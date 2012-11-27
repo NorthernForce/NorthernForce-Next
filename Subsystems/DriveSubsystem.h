@@ -17,6 +17,8 @@ private:
 public:
 	DriveSubsystem();
 	void InitDefaultCommand();
+	void DriveTeleop(FRCXboxJoystick &stick);
+	void DriveAutonomous();
 };
 
 #endif
