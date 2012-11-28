@@ -69,7 +69,7 @@ void LogSystem::LogMessage(const char* message, LogPriority level)
  */
 void LogSystem::Print(const char* message)
 {
-	printf("%s\n",message);
+	printf("%i:  %s\n",GetFPGATime(),message);
 }
 
 /**
@@ -82,6 +82,6 @@ void LogSystem::PrintToFile(const char* message)
 {
 	//@TODO Log message to the logfile.
 	FILE* logFile = fopen("logfile.txt","a"); 
-	fprintf(logFile, "%s\n",message);
+	fprintf(logFile, "%i:  %s\n",GetFPGATime(),message);
 	fclose(logFile);
 }

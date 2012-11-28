@@ -1,5 +1,6 @@
 #include "DriveSubsystem.h"
 #include "../Robotmap.h"
+#include "../Commands/TeleopDriveCommand.h"
 
 /**
  * @brief Initializes the drive subsystem.
@@ -18,7 +19,7 @@ DriveSubsystem::DriveSubsystem() : Subsystem("DriveSubsystem")
  */
 void DriveSubsystem::InitDefaultCommand() 
 {
-
+	SetDefaultCommand(new TeleopDriveCommand());
 }
 
 /**
