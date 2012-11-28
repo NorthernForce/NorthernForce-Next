@@ -5,7 +5,7 @@ TeleopDriveCommand::TeleopDriveCommand() :
 {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
-	Requires(CommandBase::s_Drive);
+	Requires(s_Drive);
 }
 
 // Called just before this Command runs the first time
@@ -17,7 +17,7 @@ void TeleopDriveCommand::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void TeleopDriveCommand::Execute() 
 {
-	s_Drive->DriveTeleop(CommandBase::oi->GetDriverStick());
+	s_Drive->DriveTeleop(oi->GetDriverStick());
 }
 
 // Make this return true when this Command no longer needs to run execute()

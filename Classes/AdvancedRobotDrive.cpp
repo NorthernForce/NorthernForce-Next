@@ -77,10 +77,9 @@ catch (exception e)
 AdvancedRobotDrive::AdvancedRobotDrive(DriveMode mode):
     DriveMotors(),
     RobotDrive(DriveMotors::m_rearRightMotor, DriveMotors::m_rearLeftMotor,
-		DriveMotors::m_frontRightMotor, DriveMotors::m_frontLeftMotor),
-    m_driveMode (mode)
+		DriveMotors::m_frontRightMotor, DriveMotors::m_frontLeftMotor)
 {
-
+	m_driveMode = mode;
 }
 
 /**
@@ -93,6 +92,7 @@ AdvancedRobotDrive::AdvancedRobotDrive(DriveMode mode):
  */
 void AdvancedRobotDrive::DriveRobot(FRCXboxJoystick &joystick)
 {
+	m_safetyHelper->Feed();
 	switch (m_driveMode)
 	{
 		case kMecanumDrive:
@@ -119,6 +119,7 @@ void AdvancedRobotDrive::DriveRobot(FRCXboxJoystick &joystick)
  */
 void AdvancedRobotDrive::DriveAutonomous()
 {
+	m_safetyHelper->Feed();
 	//@TODO: Develop code for driving in Autonomous mode.
 }
 
@@ -129,6 +130,7 @@ void AdvancedRobotDrive::DriveAutonomous()
  */
 void AdvancedRobotDrive::DriveMecanum(FRCXboxJoystick& joystick)
 {
+	m_safetyHelper->Feed();
 	RobotDrive::MecanumDrive_Polar(joystick.GetLeftStickY(),joystick.GetLeftStickX(),joystick.GetRightStickX());
 }
 
@@ -139,6 +141,7 @@ void AdvancedRobotDrive::DriveMecanum(FRCXboxJoystick& joystick)
  */
 void AdvancedRobotDrive::DriveBSBot(FRCXboxJoystick& joystick)
 {
+	m_safetyHelper->Feed();
 	float rotateValue = joystick.GetRightStickX();
 	float moveValue = -joystick.GetLeftStickY();
 	
@@ -197,6 +200,7 @@ void AdvancedRobotDrive::DriveBSBot(FRCXboxJoystick& joystick)
  */
 void AdvancedRobotDrive::DriveSkidSteer(FRCXboxJoystick& joystick)
 {
+	m_safetyHelper->Feed();
 	//@TODO Derive math for SkidSteer.
 }
 
@@ -205,6 +209,7 @@ void AdvancedRobotDrive::DriveSkidSteer(FRCXboxJoystick& joystick)
  */
 void AdvancedRobotDrive::DriveSwivelSteer(FRCXboxJoystick& joystick)
 {
+	m_safetyHelper->Feed();
 	//@TODO Derive math for SwivelSteer. (Do we even need this?)
 }
 
@@ -244,6 +249,7 @@ void AdvancedRobotDrive::PowerMotors (
 		float frontRight,
 		float rearRight)
 {
+	m_safetyHelper->Feed();
 	//I added this switch so that we can change what the power motors does for each drive mode. Sometimes
 	//values need to be reversed for a certain chassis. This would allow for that to happen.
 	switch (m_driveMode)
