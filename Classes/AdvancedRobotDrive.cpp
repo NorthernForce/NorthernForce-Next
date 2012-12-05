@@ -35,16 +35,16 @@ namespace
  * @author Stephen Nutt
  */
 DriveMotors::DriveMotors() try :
-	m_frontLeftMotor ((printf("Initializing front left jaguar. \n"), kFrontLeftJaguar), 
+	m_frontLeftMotor ((CommandBase::s_Log->LogMessage("Initializing front left jaguar."), kFrontLeftJaguar), 
 		kDriveRamp, kDriveVelocityLimit, tolerance, thereTolerance),
-	m_frontRightMotor((printf("Initializing front right jaguar. \n"), kFrontRightJaguar), 
+	m_frontRightMotor((CommandBase::s_Log->LogMessage("Initializing front right jaguar."), kFrontRightJaguar), 
 		kDriveRamp, kDriveVelocityLimit, tolerance, thereTolerance),
-	m_rearLeftMotor  ((printf("Initializing rear left jaguar. \n"), kRearLeftJaguar), 
+	m_rearLeftMotor  ((CommandBase::s_Log->LogMessage("Initializing rear left jaguar."), kRearLeftJaguar), 
 		kDriveRamp, kDriveVelocityLimit, tolerance, thereTolerance),
-	m_rearRightMotor ((printf("Initializing rear right jaguar. \n"), kRearRightJaguar), 
+	m_rearRightMotor ((CommandBase::s_Log->LogMessage("Initializing rear right jaguar."), kRearRightJaguar), 
 		kDriveRamp, kDriveVelocityLimit, tolerance, thereTolerance)
 {
-	printf("Drive jaguars successfully created. \n\r");
+	CommandBase::s_Log->LogMessage("Drive jaguars successfully created.",kLogPriorityDebug);
 
 	DriveMotors::m_frontLeftMotor.ConfigMaxOutputVoltage(kDriveOutputVoltageLimit);
 	DriveMotors::m_frontLeftMotor.ConfigNeutralMode(CANJaguar::kNeutralMode_Brake);
@@ -58,12 +58,12 @@ DriveMotors::DriveMotors() try :
 	DriveMotors::m_rearRightMotor.ConfigMaxOutputVoltage(kDriveOutputVoltageLimit);
 	DriveMotors::m_rearRightMotor.ConfigNeutralMode(CANJaguar::kNeutralMode_Brake);
 
-	printf("Drive jaguars successfully instantiated\n\r");
+	CommandBase::s_Log->LogMessage("Drive jaguars successfully instantiated.",kLogPriorityDebug);
 }
 catch (exception e)
 {
-	printf("Error creating jaguars.");
-	printf(e.what());
+	CommandBase::s_Log->LogMessage("Error creating jaguars.",kLogPriorityError);
+	CommandBase::s_Log->LogMessage(e.what(),kLogPriorityError);
 }
 
 /**
@@ -92,6 +92,7 @@ AdvancedRobotDrive::AdvancedRobotDrive(DriveMode mode):
  */
 void AdvancedRobotDrive::DriveRobot(FRCXboxJoystick &joystick)
 {
+	CommandBase::s_Log->LogMessage("Entering AdvancedRobotDrive::DriveRobot.",kLogPrioritySystem);
 	m_safetyHelper->Feed();
 	switch (m_driveMode)
 	{

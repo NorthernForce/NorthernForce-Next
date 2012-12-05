@@ -24,6 +24,6 @@ LogSystem* CommandBase::s_Log = NULL;
 void CommandBase::init() 
 {
 	oi = new OperatorInterface();
-	s_Drive = new DriveSubsystem();
+	s_Drive = new DriveSubsystem(kBSBotDrive);
 	s_Log = new LogSystem(kLogPrioritySystem);
 }

@@ -26,7 +26,7 @@ private:
 public:
 	LogSystem(LogPriority level);
 	void InitDefaultCommand();
-	void LogMessage(const char* message, LogPriority level);
+	void LogMessage(const char* message, LogPriority level = kLogPriorityDebug);
 };
 
 #endif

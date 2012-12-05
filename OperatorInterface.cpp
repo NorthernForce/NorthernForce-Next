@@ -11,7 +11,7 @@ OperatorInterface::OperatorInterface() try :
 	//Create joystick buttons for each joystick here, using
 	//stick.button.WhenPressed(new Command()); or stick.button.WhileHeld(new Command());
     
-	CommandBase::s_Log->LogMessage("All OI elements created successfully.\n",kLogPrioritySystem);
+	CommandBase::s_Log->LogMessage("All OI elements created successfully.",kLogPriorityDebug);
 }
 catch (exception e)
 {

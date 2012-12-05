@@ -7,9 +7,10 @@
  * 
  * @author Arthur Lockman
  */
-DriveSubsystem::DriveSubsystem() : Subsystem("DriveSubsystem") 
+DriveSubsystem::DriveSubsystem(DriveMode mode) : Subsystem("DriveSubsystem") 
 {
-	m_drive = new AdvancedRobotDrive(kBSBotDrive);
+	m_drive = new AdvancedRobotDrive(mode);
+	CommandBase::s_Log->LogMessage("Drive system initiated.",kLogPriorityDebug);
 }
 
 /**
@@ -19,7 +20,6 @@ DriveSubsystem::DriveSubsystem() : Subsystem("DriveSubsystem")
  */
 void DriveSubsystem::InitDefaultCommand() 
 {
-	SetDefaultCommand(new TeleopDriveCommand());
 }
 
 /**
