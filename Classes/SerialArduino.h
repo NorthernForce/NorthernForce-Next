@@ -1,5 +1,5 @@
-#ifndef ARDUINO_H
-#define ARDUINO_H
+#ifndef SERIALARDUINO_H
+#define SERIALARDUINO_H
 /*
  * Description: A class for interfacing with an Arduino. Handles
  * connection over a serial port, defined in the constructor.
@@ -7,12 +7,12 @@
  */
 #include <WPILib.h>
 
-class Arduino
+class SerialArduino
 {
 public:
-	Arduino();
-	Arduino(int baudRate);
-	~Arduino();
+	SerialArduino();
+	SerialArduino(int baudRate);
+	~SerialArduino();
 	
 	std::string GetData();
 	void SendData(std::string dataString);

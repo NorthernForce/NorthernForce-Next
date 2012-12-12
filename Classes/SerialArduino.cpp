@@ -1,10 +1,10 @@
-#include "Arduino.h"
+#include "SerialArduino.h"
 
 /**
  * @brief Default constructor for the Arduino class.
  * Sets the serial port to run at 9600 baud.
  */
-Arduino::Arduino():
+SerialArduino::SerialArduino():
 	serialConnection(9600),
 	baud(9600)
 {
@@ -15,7 +15,7 @@ Arduino::Arduino():
  * @brief Constructs the Arduino at the desired baud speed
  * @param baudRate the baud rate to open the connection at.
  */
-Arduino::Arduino(int baudRate):
+SerialArduino::SerialArduino(int baudRate):
 		serialConnection(baudRate),
 		baud(baudRate)
 {
@@ -25,7 +25,7 @@ Arduino::Arduino(int baudRate):
 /**
  * @brief The destructor for the Arduino class.
  */
-Arduino::~Arduino()
+SerialArduino::~SerialArduino()
 {
 	delete &serialConnection;
 }
@@ -34,7 +34,7 @@ Arduino::~Arduino()
  * @brief Gets a string of data from the buffer.
  * @return The string of data.
  */
-std::string Arduino::GetData()
+std::string SerialArduino::GetData()
 {
 	char* str;
 	serialConnection.Scanf("%s",str);
@@ -45,7 +45,7 @@ std::string Arduino::GetData()
  * @brief Sends a string to the Arduino.
  * @param dataString A string of data to send to the robot.
  */
-void Arduino::SendData(std::string dataString)
+void SerialArduino::SendData(std::string dataString)
 {
 	serialConnection.Printf("%s",&dataString);
 }
@@ -53,7 +53,7 @@ void Arduino::SendData(std::string dataString)
 /**
  * @brief Resets the serial connection.
  */
-void Arduino::ResetConnection()
+void SerialArduino::ResetConnection()
 {
 	serialConnection.Reset();
 }
